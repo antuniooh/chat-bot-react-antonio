@@ -78,10 +78,10 @@ input{
   align-self: 'center'
 }
 .chat{
-  width: 95%;
+  width: 90%;
 }
 .historyContainer{
-  height:80vh;
+  height:75vh;
   overflow: scroll;
 }
 

@@ -1,4 +1,3 @@
-// Import types
 import {
   INPUT_SUCCESS,
   INPUT_FAIL,
@@ -8,12 +7,10 @@ import {
   MESSAGE_FAIL,
 } from "../actions/types";
 
-// Initial state
 const initialState = {
   messages: [],
 };
 
-// Switch statement - update state
 export default (state = initialState, action) => {
   const { type, payload } = action;
   let { messages } = state;

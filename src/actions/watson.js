@@ -1,4 +1,3 @@
-// Import types
 import {
   INPUT_SUCCESS,
   INPUT_FAIL,
@@ -8,10 +7,8 @@ import {
   MESSAGE_FAIL,
 } from "./types";
 
-//  Import axios
 import axios from "axios";
 
-//  Function that handles  users message
 export const userMessage = (message) => async (dispatch) => {
   try {
     dispatch({ type: INPUT_SUCCESS, payload: message });
@@ -20,7 +17,6 @@ export const userMessage = (message) => async (dispatch) => {
   }
 };
 
-//  Creates a session - API CALL
 export const createSession = () => async (dispatch) => {
   try {
     console.log("Create session")
@@ -28,17 +24,14 @@ export const createSession = () => async (dispatch) => {
     .then(function (response) {
       console.log("Criei a sessão");
       axios.defaults.headers.common["session_id"] = response.data['session_id'];
-  })
-  .catch(function (error) {
-      console.log(error);
-  });
+    });
+
     dispatch({ type: SESSION_SUCCESS, payload: res.data });
   } catch (err) {
     dispatch({ type: SESSION_FAIL });
   }
 };
 
-//  Sends the message to the bot - API CALL
 export const sendMessage = (message) => async (dispatch) => {
   try {
     const body = { input: message };
