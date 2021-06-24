@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, button } from "react";
 import { connect } from "react-redux";
 
 //  Import action
@@ -15,34 +15,41 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
   useEffect(scrollToBottom, [chat]);
 
   //  Function that handles user submission
-  const handleClick = async (e) => {
-    const code = e.keyCode || e.which;
-
-    if (code === 13) {
-      console.log(message);
+  function handleClick() {
+    if(message.length > 0){
       userMessage(message);
       sendMessage(message);
       setMessage("");
     }
-  };
+  }
 
   return (
+    <div className="App">
+    <header className="App-header">
+      <h1>Antônio Chatbot</h1>
+    </header>
     <div className="chat">
-      <h1>Chatty the Chatbot</h1>
       {/* Handle Messages */}
       <div className="historyContainer">
         {chat.length === 0
           ? ""
-          : chat.map((msg) => <div className={msg.type} key={msg.type}>{msg.message}</div>)}
+          : chat.map((msg) => <div className={msg.type}>{msg.message}</div>)}
         <div ref={endOfMessages}></div>
       </div>
       {/* Input Box */}
+    </div>
+    <div className="footerInput">
+
       <input
         id="chatBox"
         onChange={(e) => setMessage(e.target.value)}
-        onKeyPress={handleClick}
         value={message}
+        placeholder="Type a message here..."
       ></input>
+      <button className="customButton" onClick={handleClick}>
+        Send
+      </button>  
+    </div>  
     </div>
   );
 };

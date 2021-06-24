@@ -17,9 +17,8 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   display: block;
 }
- 
-.container{
-  text-align: center;
+
+.App{
   flex:1;
   display:flex;
   flex-Direction: column;
@@ -30,22 +29,28 @@ html {
   width: 100%;
   margin: 0;
 }
-
+.App-header {
+  background-color: rgb(100, 204, 108);
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color:white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100vw;
+}
 input{
   border: 0;
   height: 5vh;
-  width: 90vw;
+  width: 75vw;
   outline: none;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  margin-top: 20px;
-  background-color: #808080;
-  border-radius: 25px;
+  padding-left: 10%;
+  background-color: #E9E9E9;
+  border-radius: 5px;
 }
 
-
 .bot{
-  background-color: #EFF2F7;
+  background-color: #E9E9E9;
   color: #444044;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-radius: 10px;
@@ -53,32 +58,49 @@ input{
   margin-top: 10px;
   padding: 15px;
   max-width: 45vw;
+  margin-top: 1vh;
   margin-right: auto;
   margin-left: 1vw;
 }
 
 .user{
-  background-color: #0110ff;
+  background-color: rgb(100, 204, 108);
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-radius: 10px; 
   padding: 15px;
   margin-left: auto;
   max-width: 45vw;
+  max-height: 3vw;
   margin-right: 1vw;
+  margin-top: 1vh;
   display: flex;
   align-self: 'center'
 }
-
 .chat{
-  display: inline-block;
-  background-color: white;
-  width: 100vw;
+  width: 95%;
 }
 .historyContainer{
-  height:600px;
+  height:80vh;
   overflow: scroll;
 }
+
 h1{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 } 
+
+.footerInput {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+
+.customButton{
+  background-color: rgb(100, 204, 108);
+  color: white;
+  height: 5vh;
+  border-radius: 5px;
+  outline: none;
+  border-style: none;
+  text-transform: uppercase;
+}

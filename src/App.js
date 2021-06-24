@@ -22,10 +22,8 @@ var session = "undefined"
 // Connect application to redux
 const App = () => {
   useEffect(() => {
-    console.log(localStorage.session)
-
     if (session === "undefined" || session === "null") {
-    store.dispatch(createSession());
+      store.dispatch(createSession());
     }
   });
   return (
