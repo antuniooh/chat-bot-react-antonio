@@ -45,7 +45,7 @@ Project developed autonomously to learn more about IBM Watson API. It consists o
 
 The program reads consumes the IBM Watson API to send messages and show the callback.
 
-![app](https://github.com/antuniooh/chatbot-antonio/blob/master/images/app.gif)
+![app](https://github.com/antuniooh/chatbot-antonio/blob/main/images/app.gif)
 
 
 <!-- HOW TO RUN -->
